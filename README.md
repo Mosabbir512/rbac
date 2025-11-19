@@ -24,18 +24,29 @@ A complete Role-Based Access Control system built with Spring Boot, Spring Secur
 - `POST /api/auth/signin` - User login
 
 ### Products (RBAC Protected)
-GET /api/products - Get all products (PRODUCT_READ)
-GET /api/products/{id} - Get product by ID (PRODUCT_READ)
-POST /api/products - Create product (PRODUCT_WRITE - Admin only)
-PUT /api/products/{id} - Update product (PRODUCT_UPDATE - Admin only)
-DELETE /api/products/{id} - Delete product (PRODUCT_DELETE - Admin only)
+- `GET /api/products` - Get all products (PRODUCT_READ)
+- `GET /api/products/{id}` - Get product by ID (PRODUCT_READ)
+- `POST /api/products` - Create product (PRODUCT_WRITE - Admin only)
+- `PUT /api/products/{id}` - Update product (PRODUCT_UPDATE - Admin only)
+- `DELETE /api/products/{id}` - Delete product (PRODUCT_DELETE - Admin only)
 
-### Default Users
+### Admin Endpoints
+- `GET /api/admin/users` - Get all users (Admin only)
+- `POST /api/admin/promote/{username}` - Promote user to admin (Admin only)
+
+## 👤 Default Users
 - **Admin:** username: `admin`, password: `admin123`
 - **User:** username: `user`, password: `user123`
 
 ## 🚀 Quick Start
-1. Clone repository
-2. Configure MySQL in `application.properties`
-3. Run `mvn spring-boot:run`
-4. Use Postman collection to test APIs
+
+### Prerequisites
+- Java 17
+- MySQL 8.0+
+- Maven 3.6+
+
+### Installation
+1. Clone the repository
+   ```bash
+   git clone https://github.com/Mosabbir512/rbac.git
+   cd rbac
